@@ -38,4 +38,8 @@ Pod::Spec.new do |s|
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'Masonry'
   s.dependency 'YYModel'
+  s.dependency 'FYFCategory'
+  s.dependency 'FYFDeviceInfo'
+  s.dependency 'FYFDefines'
+  
 end

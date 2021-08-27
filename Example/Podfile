@@ -4,6 +4,9 @@ platform :ios, '9.0'
 
 target 'FYFWebComponent_Example' do
   pod 'FYFWebComponent', :path => '../'
+  pod 'FYFDeviceInfo', :git => 'https://github.com/fanyunfei786452470/FYFDeviceInfo.git'
+  pod 'FYFCategory', :git => 'https://github.com/fanyunfei786452470/FYFCategory.git'
+  pod 'FYFDefines', :git => 'https://github.com/fanyunfei786452470/FYFDefines.git'
 
   target 'FYFWebComponent_Tests' do
     inherit! :search_paths
