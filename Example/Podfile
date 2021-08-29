@@ -1,15 +1,13 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
+
 use_frameworks!
 
 platform :ios, '9.0'
 
 target 'FYFWebComponent_Example' do
   pod 'FYFWebComponent', :path => '../'
-  pod 'FYFDeviceInfo','~>0.1.0'
-  pod 'FYFCategory','~>0.1.1'
-  pod 'FYFDefines','~>0.1.0'
 
   target 'FYFWebComponent_Tests' do
     inherit! :search_paths
