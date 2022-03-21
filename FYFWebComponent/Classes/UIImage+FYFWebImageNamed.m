@@ -10,12 +10,12 @@
 @implementation UIImage (FYFWebImageNamed)
 
 + (UIImage *)fyf_webImageNamed:(NSString *)name {
-    static NSBundle *newsBundle = nil;
-    if (!newsBundle) {
+    static NSBundle *webBundle = nil;
+    if (!webBundle) {
         NSString *bundlePath = [[NSBundle bundleForClass:NSClassFromString(@"FYFWebComponent")].resourcePath stringByAppendingPathComponent:@"FYFWebComponent.bundle"];
-        newsBundle = [NSBundle bundleWithPath:bundlePath];
+        webBundle = [NSBundle bundleWithPath:bundlePath];
     }
-    return [self fyf_webImageNamed:name inBundle:newsBundle];
+    return [self fyf_webImageNamed:name inBundle:webBundle];
 }
 
 + (UIImage *)fyf_webImageNamed:(NSString *)name inBundle:(NSBundle *)bundle {

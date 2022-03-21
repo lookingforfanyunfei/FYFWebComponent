@@ -347,6 +347,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-FYFWebComponent_Example/Pods-FYFWebComponent_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FYFCategory/FYFCategory.framework",
+				"${BUILT_PRODUCTS_DIR}/FYFDefines/FYFDefines.framework",
 				"${BUILT_PRODUCTS_DIR}/FYFDeviceInfo/FYFDeviceInfo.framework",
 				"${BUILT_PRODUCTS_DIR}/FYFWebComponent/FYFWebComponent.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
@@ -355,6 +356,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FYFCategory.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FYFDefines.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FYFDeviceInfo.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FYFWebComponent.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
