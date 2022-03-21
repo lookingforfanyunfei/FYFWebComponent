@@ -58,7 +58,7 @@
     return nil;
 }
 
-- (void)registor:(FYFWebViewJSBridge *)jsBridge {
+- (void)registor:(FYFWebViewJSBridge * __nullable)jsBridge {
     if (!jsBridge) {
         return;
     }
@@ -66,20 +66,23 @@
     self.currentWebViewID = jsBridge.webViewID;
 }
 
-- (void)unregistor:(FYFWebViewJSBridge *)jsBridge {
+- (void)unregistor:(FYFWebViewJSBridge * __nullable)jsBridge {
     if (jsBridge) {
         [self.webViewIDToJsBridgeMap removeObjectForKey:jsBridge.webViewID];
     }
 }
 
-- (void)clear:(FYFWebViewJSBridge *)jsBridge {
+- (void)clear:(FYFWebViewJSBridge * __nullable)jsBridge {
     if (jsBridge) {
         [self.webViewIDToJsBridgeMap removeObjectForKey:jsBridge.webViewID];
         [jsBridge clear];
     }
 }
 
-- (void)iosTriggerJSFunctionNo:(NSString *)functionNo param:(NSObject *)param {
+- (void)iosTriggerJSFunctionNo:(NSString * __nonnull)functionNo param:(NSObject * __nullable)param {
+    if (!functionNo || !functionNo.length) {
+        return;
+    }
     FYFWebViewJSBridge *jsBridge = [[FYFJSBridgeManager shareInstance] currentJsBridge];
     if (jsBridge) {
         [jsBridge iosTriggerJSFunctionNo:functionNo param:param];

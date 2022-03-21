@@ -50,11 +50,14 @@ NSString *const kOCTriggerJSMethod = @"triggerMessage";//OC主动调用
     [self clear];
 }
 
-- (void)prepareLoadUrl:(NSString *)urlString {
+- (void)prepareLoadUrl:(NSString * __nonnull)urlString {
     [self prepareLoadUrl:urlString cachePolicy:NSURLRequestReloadIgnoringCacheData];
 }
 
-- (void)prepareLoadUrl:(NSString *)urlString cachePolicy:(NSURLRequestCachePolicy)cachePolicy {
+- (void)prepareLoadUrl:(NSString * __nonnull)urlString cachePolicy:(NSURLRequestCachePolicy)cachePolicy {
+    if (!urlString || !urlString.length) {
+        return;
+    }
     // 暂不支持加载本地文件
     NSURL *webUrl = [NSURL URLWithString:urlString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:webUrl cachePolicy:cachePolicy timeoutInterval:KS_REQUEST_TIMEOUT_INTERVAL];
@@ -64,7 +67,7 @@ NSString *const kOCTriggerJSMethod = @"triggerMessage";//OC主动调用
 /// 原生回调js
 /// @param flowNo 流水号
 /// @param param 参数
-- (void)iosCallbackJSFlowNo:(NSString *)flowNo param:(NSObject *)param {
+- (void)iosCallbackJSFlowNo:(NSString * __nonnull)flowNo param:(NSObject * __nullable)param {
     if (!_webView || !flowNo.length) {
         return;
     }
@@ -80,7 +83,7 @@ NSString *const kOCTriggerJSMethod = @"triggerMessage";//OC主动调用
 /// 原生主动调用js
 /// @param functionNo 功能号
 /// @param param 参数
-- (void)iosTriggerJSFunctionNo:(NSString *)functionNo param:(NSObject *)param {
+- (void)iosTriggerJSFunctionNo:(NSString * __nonnull)functionNo param:(NSObject * __nullable)param {
     if (!_webView || !functionNo.length) {
         return;
     }

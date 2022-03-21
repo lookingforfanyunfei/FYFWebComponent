@@ -18,12 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 安全执行js
 /// @param script 要执行的js代码
-- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString *)script;
+- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString * __nonnull)script;
 
 /// 安全执行js
 /// @param script 要执行的js代码
 /// @param block js执行完成的回调
-- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString *)script completionBlock:(FYFWebViewJSCompletionBlock)block;
+- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString * __nonnull)script completionBlock:(FYFWebViewJSCompletionBlock)block;
 
 @end
 

@@ -46,11 +46,11 @@ static NSString *const FYFPluginPrefix = @"FYFPlugin";
     return self;
 }
 
-- (void)invokePluginWithFunctionNo:(NSString *)functionNo param:(id)param {
+- (void)invokePluginWithFunctionNo:(NSString * __nonnull)functionNo param:(id __nullable)param {
     [self _invokeNativeWithParam:param functionNo:functionNo];
 }
 
-- (void)jsCallBackNativeWithParam:(NSDictionary *)param functionNo:(NSString *)functionNo {
+- (void)jsCallBackNativeWithParam:(NSDictionary * __nullable)param functionNo:(NSString * __nonnull)functionNo {
     [self _invokeNativeWithParam:param functionNo:functionNo];
 }
 

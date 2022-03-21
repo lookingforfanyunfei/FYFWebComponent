@@ -30,18 +30,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 预加载，默认NSURLRequestReloadIgnoringCacheData，即没缓存
 /// @param urlString
-- (void)prepareLoadUrl:(NSString *)urlString;
-- (void)prepareLoadUrl:(NSString *)urlString cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
+- (void)prepareLoadUrl:(NSString * __nonnull)urlString;
+- (void)prepareLoadUrl:(NSString * __nonnull)urlString cachePolicy:(NSURLRequestCachePolicy)cachePolicy;
 
 /// 原生回调js
 /// @param flowNo 流水号
 /// @param param 参数
-- (void)iosCallbackJSFlowNo:(NSString *)flowNo param:(NSObject *)param;
+- (void)iosCallbackJSFlowNo:(NSString * __nonnull)flowNo param:(NSObject * __nullable)param;
 
 /// 原生主动调用js
 /// @param functionNo 方法名
 /// @param param 参数
-- (void)iosTriggerJSFunctionNo:(NSString *)functionNo param:(NSObject *)param;
+- (void)iosTriggerJSFunctionNo:(NSString * __nonnull)functionNo param:(NSObject * __nullable)param;
 
 @end
 

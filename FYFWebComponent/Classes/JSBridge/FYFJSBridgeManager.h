@@ -30,20 +30,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 注册浏览器对象
 /// @param jsBridge
-- (void)registor:(FYFWebViewJSBridge *)jsBridge;
+- (void)registor:(FYFWebViewJSBridge * __nullable)jsBridge;
 
 /// 卸载浏览器对象
 /// @param jsBridge
-- (void)unregistor:(FYFWebViewJSBridge *)jsBridge;
+- (void)unregistor:(FYFWebViewJSBridge * __nullable)jsBridge;
 
 /// 清除浏览器对象
 /// @param jsBridge
-- (void)clear:(FYFWebViewJSBridge *)jsBridge;
+- (void)clear:(FYFWebViewJSBridge * __nullable)jsBridge;
 
 /// 原生主动调用js
 /// @param functionNo 功能号
 /// @param param 参数
-- (void)iosTriggerJSFunctionNo:(NSString *)functionNo param:(NSObject *)param;
+- (void)iosTriggerJSFunctionNo:(NSString * __nonnull)functionNo param:(NSObject * __nullable)param;
 
 @end
 

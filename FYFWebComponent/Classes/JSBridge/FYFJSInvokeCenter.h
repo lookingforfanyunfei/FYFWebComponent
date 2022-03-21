@@ -20,12 +20,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// js调用native方法入口
 /// @param funcNo 功能号
 /// @param param 参数
-- (void)invokePluginWithFunctionNo:(NSString *)functionNo param:(id)param;
+- (void)invokePluginWithFunctionNo:(NSString * __nonnull)functionNo param:(id __nullable)param;
 
 /// js回调原生
 /// @param param 参数
 /// @param functionNo functionNo
-- (void)jsCallBackNativeWithParam:(NSDictionary *)param functionNo:(NSString *)functionNo;
+- (void)jsCallBackNativeWithParam:(NSDictionary * __nullable)param functionNo:(NSString * __nonnull)functionNo;
 
 @end
 

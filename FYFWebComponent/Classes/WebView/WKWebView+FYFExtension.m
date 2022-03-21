@@ -37,11 +37,11 @@
     return wrapObj.weakObj;
 }
 
-- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString *)script {
+- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString * __nonnull)script {
     [self fyf_safeAsyncEvaluateJavaScriptString:script completionBlock:nil];
 }
 
-- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString *)script completionBlock:(FYFWebViewJSCompletionBlock)block {
+- (void)fyf_safeAsyncEvaluateJavaScriptString:(NSString * __nonnull)script completionBlock:(FYFWebViewJSCompletionBlock)block {
     if(![[NSThread currentThread] isMainThread]){
         dispatch_async(dispatch_get_main_queue(), ^{
             //retain self
